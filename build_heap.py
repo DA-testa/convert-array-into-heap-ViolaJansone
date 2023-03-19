@@ -1,17 +1,17 @@
 # python3
 def defline_heap(data, v, j, swaps);
-smallest = v
-leftChild = 2*v+1
-rightChild= 2 I+2
-if leftChild < j and data[leftChild] < data[smallest]:
+ smallest = v
+ leftChild = 2 * v + 1
+ rightChild = 2 * v + 2
+ if leftChild < j and data[leftChild] < data[smallest]:
     smallest = leftChild
-if rightChild < j and data [rightChild] < data[smallest]:
+ if rightChild < j and data[rightChild] < data[smallest]:
     smallest = rightChild
 
 if smalest !=v:
-    data[v], data[smallest]= data[smallest], data[i]
-    swaps.append((i,smalest))
-    define-heap(data, v, smallest, swaps)
+    data[v], data[smallest]= data[smallest], data[v]
+    swaps.append((v,smalest))
+    define-heap(data, j, smallest, swaps)
     
     
 def build_heap(data):
@@ -34,11 +34,11 @@ def main():
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
-if "F" in text:
+    if "F" in text:
            filename = input()
            if "a" not in filename:
-           path = "./tests/" + filename
-           with oprn(path, "r") as file:
+          m  path = "./tests/" + filename
+             with oprn(path, "r") as file:
            j = int(file.readline())
            data = list(map(int, file.readline().split()))
     if "I" in text:
